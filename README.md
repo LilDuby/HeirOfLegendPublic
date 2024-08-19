@@ -53,15 +53,10 @@ sprite의 색상을 흰색으로 조절하였으나 흰색은 표현X
 
  ## 데미지 표시
  
-| **문제 발생** : | 캐릭터 피격시 데미지 값이 y축 상승하며 사라지는것을 구현하려 하였으나
-상승 및 감마값 변화가 적용되지 않는 문제 발생 |
+| **문제 발생** : | 캐릭터 피격시 데미지 값이 y축 상승하며 사라지는것을 구현하려 하였으나 상승 및 감마값 변화가 적용되지 않는 문제 발생 |
 | --- | --- |
-| **원인 파악** | elapsedTime += Time.deltaTime;
-Vector3.Lerp(startPosition, endPosition, elapsedTime);로 
-구현을 하였으나 Time.deltaTime으로 하면 동작이 되질 않는것을 파악 |
-| **문제 해결** | elapsedTime = 0f;  duration = 2f; 
-elapsedTime += Time.deltaTime; 시작과 끝을 정하고
-증가하는 시작시간에 끝을 나눈 값을 대입 하여 해결 |
+| **원인 파악** | elapsedTime += Time.deltaTime; Vector3.Lerp(startPosition, endPosition, elapsedTime);로 구현을 하였으나 Time.deltaTime으로 하면 동작이 되질 않는것을 파악 |
+| **문제 해결** | elapsedTime = 0f;  duration = 2f; elapsedTime += Time.deltaTime; 시작과 끝을 정하고 증가하는 시작시간에 끝을 나눈 값을 대입 하여 해결 |
 
 ![image](https://github.com/user-attachments/assets/a43d921c-5272-48ac-bbec-bb8a71d0c667)
 
