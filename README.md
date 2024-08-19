@@ -25,19 +25,19 @@
 # 기술적 고민과 트러블 슈팅
 ## 피격 효과 FlashWhite
     
-    **문제 발생** : 캐릭터 피격 효과를 흰색으로 표현하고 싶어서
-    sprite의 색상을 흰색으로 조절하였으나 흰색은 표현X
+**문제 발생** : 캐릭터 피격 효과를 흰색으로 표현하고 싶어서
+sprite의 색상을 흰색으로 조절하였으나 흰색은 표현X
     
-    **원인 파악** : Sprites-Default Material은 argb ( 알파, 빨강, 초록,
-    녹색 ) 이상은 어떤 효과도 지원해주지 않는 모양
+**원인 파악** : Sprites-Default Material은 argb ( 알파, 빨강, 초록,
+녹색 ) 이상은 어떤 효과도 지원해주지 않는 모양
     
-    **문제 해결** : 흰색으로 표현해주는 Shader추가 및 해당 Shader가
-    적용된 Material생성 후 피격 순간 잠시 Material을
-    교체하는 방식으로 적용하여 해결
-    
-    ![image](https://github.com/user-attachments/assets/ce27a3aa-8149-4cca-9826-ffeec548d239)
-    
-    ![image](https://github.com/user-attachments/assets/94d1a6b3-89df-4097-a68e-51b542051d3e)
+**문제 해결** : 흰색으로 표현해주는 Shader추가 및 해당 Shader가
+적용된 Material생성 후 피격 순간 잠시 Material을
+교체하는 방식으로 적용하여 해결
+
+![image](https://github.com/user-attachments/assets/ce27a3aa-8149-4cca-9826-ffeec548d239)
+
+![image](https://github.com/user-attachments/assets/94d1a6b3-89df-4097-a68e-51b542051d3e)
 
 
  ## 데미지 표시
