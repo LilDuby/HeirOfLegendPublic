@@ -23,7 +23,7 @@
 # 사용 기술 스택
 
 # 기술적 고민과 트러블 슈팅
-- 피격 효과 FlashWhite
+## 피격 효과 FlashWhite
     
     문제 발생 : 캐릭터 피격 효과를 흰색으로 표현하고 싶어서
     sprite의 색상을 흰색으로 조절하였으나 흰색은 표현X
@@ -35,11 +35,12 @@
     적용된 Material생성 후 피격 순간 잠시 Material을
     교체하는 방식으로 적용하여 해결
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/83c75a39-3aba-4ba4-a792-7aefe4b07895/e5c7d03c-0e9e-4e01-b37c-8710ab073c92/image.png)
+    ![image](https://github.com/user-attachments/assets/ce27a3aa-8149-4cca-9826-ffeec548d239)
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/83c75a39-3aba-4ba4-a792-7aefe4b07895/1f0e722d-0f4d-4526-97d2-62524accad0a/image.png)
+    ![image](https://github.com/user-attachments/assets/94d1a6b3-89df-4097-a68e-51b542051d3e)
 
-  - 데미지 표시
+
+ ## 데미지 표시
     
     
     | 문제 발생 : | 캐릭터 피격시 데미지 값이 y축 상승하며 사라지는것을 구현하려 하였으나
@@ -52,11 +53,12 @@
     elapsedTime += Time.deltaTime; 시작과 끝을 정하고
     증가하는 시작시간에 끝을 나눈 값을 대입 하여 해결 |
     
-    ![화면 캡처 2024-08-14 160215.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/83c75a39-3aba-4ba4-a792-7aefe4b07895/df29d5b3-0a2b-450f-bc60-13d422a6bfb1/%ED%99%94%EB%A9%B4_%EC%BA%A1%EC%B2%98_2024-08-14_160215.png)
+    ![image](https://github.com/user-attachments/assets/a43d921c-5272-48ac-bbec-bb8a71d0c667)
     
-    ![화면 캡처 2024-08-16 145850.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/83c75a39-3aba-4ba4-a792-7aefe4b07895/c028aa02-0e05-475f-b4d6-c12bae48c49f/%ED%99%94%EB%A9%B4_%EC%BA%A1%EC%B2%98_2024-08-16_145850.png)
+    ![image](https://github.com/user-attachments/assets/861f57fc-1c12-47df-a314-ee5280951373)
 
-- 아이템 습득 시 보유 개수값 처리 오류
+
+## 아이템 습득 시 보유 개수값 처리 오류
     
     **`문제 발생`**:  **`ItemData`** SO파일에 현재 중첩개수를 저장할 변수값 (**`currentStack`**)을 추가한 후, 아이템 획득 시 획득 수량이 다른 모든 슬롯의 아이템 개수에 적용되는 버그 발견
     
@@ -65,7 +67,7 @@
     **`문제 해결`**:  **`ItemData`** SO파일에서 보유개수 저장값(**`currentStack`**)을 일단 제거하고, 각 인벤토리 슬롯이 아이템 데이터를 가지고 있는 **`ItemPrefab`** 스크립트 컴포넌트를 지닌 오브젝트 프리팹을 항상 가지고 있게 구조를 변경함. 이후 **`ItemPrefab`** 스크립트 내부에 현재 보유 개수를 저장하는 값(**quantity**)을 사용하기로 결정함.
     
 
-- 랜덤 맵 생성하는 과정에서 겹치는 오류
+## 랜덤 맵 생성하는 과정에서 겹치는 오류
     
     **`문제 발생` :**  프리펩해놓은 맵들을 랜덤하게 호출 하면서 서로의 방이 겹치면서 생성이 되는것을 발견
     
