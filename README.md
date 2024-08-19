@@ -2,10 +2,9 @@
 ![image](https://github.com/user-attachments/assets/191012f0-a567-4c9a-8d23-e057cab5847a)
 
 # 목차
-|순서|
-|------|
 |프로젝트 소개|
 |사용 기술 스택|
+|기술적 고민과 트러블 슈팅|
 |만든 사람들|
 
 
