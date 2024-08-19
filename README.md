@@ -25,13 +25,13 @@
 # 기술적 고민과 트러블 슈팅
 ## 피격 효과 FlashWhite
     
-    문제 발생 : 캐릭터 피격 효과를 흰색으로 표현하고 싶어서
+    **문제 발생** : 캐릭터 피격 효과를 흰색으로 표현하고 싶어서
     sprite의 색상을 흰색으로 조절하였으나 흰색은 표현X
     
-    원인 파악 : Sprites-Default Material은 argb ( 알파, 빨강, 초록,
+    **원인 파악** : Sprites-Default Material은 argb ( 알파, 빨강, 초록,
     녹색 ) 이상은 어떤 효과도 지원해주지 않는 모양
     
-    문제 해결 : 흰색으로 표현해주는 Shader추가 및 해당 Shader가
+    **문제 해결** : 흰색으로 표현해주는 Shader추가 및 해당 Shader가
     적용된 Material생성 후 피격 순간 잠시 Material을
     교체하는 방식으로 적용하여 해결
     
@@ -43,13 +43,13 @@
  ## 데미지 표시
     
     
-    | 문제 발생 : | 캐릭터 피격시 데미지 값이 y축 상승하며 사라지는것을 구현하려 하였으나
+    | **문제 발생** : | 캐릭터 피격시 데미지 값이 y축 상승하며 사라지는것을 구현하려 하였으나
     상승 및 감마값 변화가 적용되지 않는 문제 발생 |
     | --- | --- |
-    | 원인 파악 | elapsedTime += Time.deltaTime;
+    | **원인 파악** | elapsedTime += Time.deltaTime;
     Vector3.Lerp(startPosition, endPosition, elapsedTime);로 
     구현을 하였으나 Time.deltaTime으로 하면 동작이 되질 않는것을 파악 |
-    | 문제 해결 | elapsedTime = 0f;  duration = 2f; 
+    | **문제 해결** | elapsedTime = 0f;  duration = 2f; 
     elapsedTime += Time.deltaTime; 시작과 끝을 정하고
     증가하는 시작시간에 끝을 나눈 값을 대입 하여 해결 |
     
